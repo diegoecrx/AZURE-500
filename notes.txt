@@ -1,0 +1,7 @@
+
+
+protected DNS suffix = Protective Domain Name Service (PDNS)
+- mitigate DNS-related threats by acting as a recursive resolver and preventing DNS queries to known malicious domains from being resolved
+
+
+
