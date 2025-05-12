@@ -1,0 +1,18 @@
+
+Manage and respond to security alerts in Microsoft Defender for Cloud
+
+Configure workflow automation by using Microsoft Defender for Cloud
+
+Log retention plans in Microsoft Sentinel
+
+Alerts and Incidents from Microsoft Sentinel
+
+Configure data connectors in Microsoft Sentinel
+
+Enable analytics rules in Microsoft Sentinel
+
+Configure automation in Microsoft Sentinel
+
+Automating Threat Response with Microsoft Sentinel
+
+
