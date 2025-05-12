@@ -1,0 +1,33 @@
+
+Azure Storage
+
+Configure access control for storage accounts
+
+Manage life cycle for storage account access keys
+
+Select and configure an appropriate method for access to Azure Files
+
+Select and configure an appropriate method for access to Azure Blobs
+
+Select and configure an appropriate method for access to Azure Tables
+
+Select and configure an appropriate method for access to Azure Queues
+
+Select and configure appropriate methods for protecting against data security threats, including soft delete, backups, versioning, and immutable storage
+
+Configure Bring your own key (BYOK)
+
+Enable double encryption at the Azure Storage infrastructure level
+
+
+
+
+
+
+
+
+
+
+
+
+
