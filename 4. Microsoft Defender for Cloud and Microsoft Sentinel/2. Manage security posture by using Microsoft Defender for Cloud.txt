@@ -1,0 +1,16 @@
+
+Implement Microsoft Defender for Cloud
+
+Identify and remediate security risks by using the Microsoft Defender for Cloud Secure Score and Inventory
+
+Assess compliance against security frameworks and Microsoft Defender for Cloud
+
+Add industry and regulatory standards to Microsoft Defender for Cloud
+
+Add custom initiatives to Microsoft Defender for Cloud
+
+Connect hybrid cloud and multicloud environments to Microsoft Defender for Cloud
+
+Implement and use Microsoft Defender External Attack Surface Management
+
+
