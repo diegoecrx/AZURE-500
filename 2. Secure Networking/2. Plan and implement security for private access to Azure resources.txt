@@ -1,0 +1,21 @@
+
+Plan and implement virtual network Service Endpoints
+
+Plan and implement Private Endpoints
+
+Plan and implement Private Link services
+
+Plan and implement network integration for Azure App Service and Azure Functions
+
+Plan and implement network security configurations for an App Service Environment (ASE)
+
+Plan and implement network security configurations for an Azure SQL Managed Instance
+
+
+
+
+
+
+
+
+
