@@ -1,0 +1,42 @@
+
+Microsoft cloud security benchmark: Access, Data, Identity, Network, Endpoint, Governance, Recovery, Incident, and Vulnerability Management
+
+Azure governance
+
+Create, assign, and interpret security policies and initiatives in Azure Policy
+
+Azure Blueprints
+
+Configure security settings by using Azure Blueprint
+
+Deploy secure infrastructures by using a landing zone
+
+Azure Key Vault
+
+Azure Key Vault security
+
+Azure Key Vault authentication
+
+Create and configure an Azure Key Vault
+
+Recommend when to use a dedicated Hardware Security Module (HSM)
+
+Configure access to Key Vault, including vault access policies and Azure role-based access control
+
+Manage certificates, secrets, and keys
+
+Configure key rotation
+
+Configure backup and recovery of certificates, secrets, and keys
+
+Implement security controls to protect backups
+
+Implement security controls for asset management
+
+
+
+
+
+
+
+
