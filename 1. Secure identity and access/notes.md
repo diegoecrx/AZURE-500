@@ -5,14 +5,7 @@
 
 
 
-** Identity management and privileged access
-
-
-
-
-
-
-# Microsoft Cloud Security Benchmark: Identity Management & Privileged Access
+** Microsoft Cloud Security Benchmark: Identity Management & Privileged Access
 
 ---
 
