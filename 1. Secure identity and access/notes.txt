@@ -1,1 +1,43 @@
 
+
+### Manage security controls for identity and access ###
+
+
+
+
+** Identity management and privileged access
+
+
+IM-1: Use centralized identity and authentication system
+
+IM-2: Protect identity and authentication systems
+
+IM-3: Manage application identities securely and automatically
+
+IM-4: Authenticate server and services
+
+IM-5: Use single sign-on (SSO) for application access
+
+IM-6: Use strong authentication controls
+
+IM-7: Restrict resource access based on conditions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Manage Microsoft Entra application access ###
