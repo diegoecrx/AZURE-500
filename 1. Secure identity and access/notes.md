@@ -14,10 +14,6 @@
 
 # Microsoft Cloud Security Benchmark: Identity Management & Privileged Access
 
-## Overview
-
-This document summarizes the Identity Management (IM) controls in the Microsoft Cloud Security Benchmark. It is intended for students preparing for the Microsoft security-related certification exams. The controls focus on centralized identity, authentication, privileged access, and activity monitoring using Microsoft Entra ID.
-
 ---
 
 ## IM-1: Use Centralized Identity and Authentication System
