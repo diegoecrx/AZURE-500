@@ -1,10 +1,4 @@
 
-
-### Manage security controls for identity and access ###
-
-
-
-
 ** Microsoft Cloud Security Benchmark: Identity Management & Privileged Access
 
 ---
@@ -136,17 +130,3 @@ Protect accounts with elevated permissions from compromise and misuse.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Manage Microsoft Entra application access ###
