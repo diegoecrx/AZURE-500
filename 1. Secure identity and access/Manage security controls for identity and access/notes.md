@@ -581,3 +581,102 @@ Permite convidar usuários externos usando suas próprias credenciais para acess
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Implementação do Microsoft Entra Identity Protection
+
+---
+
+## Introdução ao Identity Protection
+
+Microsoft Entra ID Protection auxilia na detecção, investigação e mitigação de riscos baseados em identidade, colaborando com ferramentas como Conditional Access e SIEMs.
+
+---
+
+## Detecção de Riscos
+
+- Deteção contínua atualizada pela análise de trilhões de sinais diários.
+- Exemplos de detecções comuns:
+  - Uso de IPs anônimos
+  - Ataques de password spray
+  - Credenciais vazadas
+- Avalia o nível de risco em tempo real durante cada login.
+
+---
+
+## Investigação de Riscos
+
+Identity Protection fornece três relatórios principais:
+
+- **Risk detections**: Exibe cada risco detectado.
+- **Risky sign-ins**: Relaciona logins específicos que tiveram uma ou mais detecções de risco.
+- **Risky users**: Identifica usuários que tiveram logins arriscados ou outras detecções associadas.
+
+---
+
+## Remediação Automática e Manual
+
+### Automática:
+- Políticas condicionais baseadas em risco que exigem MFA, autenticação forte ou redefinição segura de senha.
+
+### Manual:
+- Sem remediação automática, o administrador deve revisar riscos manualmente e pode:
+  - Ignorar o risco.
+  - Confirmar como seguro.
+  - Confirmar comprometimento.
+
+---
+
+## Uso dos Dados do Identity Protection
+
+- Dados exportáveis para ferramentas SIEM ou armazenamento via APIs do Microsoft Graph.
+- Integração com Microsoft Sentinel para análise detalhada.
+- Dados podem ser enviados para:
+  - Log Analytics workspace
+  - Storage Account
+  - Event Hubs
+  - Outras soluções externas.
+
+---
+
+## Funções Necessárias para Acesso
+
+| Papel                   | Permissões                                                           | Limitações                           |
+|-------------------------|----------------------------------------------------------------------|--------------------------------------|
+| Security Administrator  | Acesso total ao Identity Protection                                  | Não pode redefinir senhas            |
+| Security Operator       | Visualizar relatórios, confirmar segurança ou comprometimento        | Não altera políticas ou redefinir senha |
+| Security Reader         | Visualização completa dos relatórios                                 | Sem alterações em políticas ou alertas|
+| Global Reader           | Apenas visualização (leitura)                                        | Nenhuma ação adicional               |
+| User Administrator      | Redefinir senhas                                                     | Sem ações adicionais                 |
+
+- Observação: Security Operator não acessa relatório de logins arriscados.
+
+---
+
+## Requisitos de Licenciamento
+
+Identity Protection exige licença Microsoft Entra ID P2:
+
+| Funcionalidade       | Entra ID Free / Microsoft 365 Apps | Entra ID P1 | Entra ID P2 |
+|----------------------|------------------------------------|-------------|-------------|
+| Políticas de risco   | Não                                | Não         | Sim         |
+| Relatórios (visão geral)| Não                             | Não         | Sim         |
+| Usuários arriscados  | Limitado                           | Limitado    | Completo    |
+| Logins arriscados    | Limitado                           | Limitado    | Completo    |
+| Detecção de riscos   | Não                                | Limitado    | Completo    |
+| Notificações         | Não                                | Não         | Sim         |
+| Resumo semanal       | Não                                | Não         | Sim         |
+| Política de registro MFA| Não                             | Não         | Sim         |
+
+---
