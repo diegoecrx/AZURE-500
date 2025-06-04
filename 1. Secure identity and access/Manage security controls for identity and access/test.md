@@ -234,6 +234,78 @@ Microsoft Entra ID é um serviço de gerenciamento de identidade e acesso basead
 
 
 
+# Criando Novo Usuário no Microsoft Entra ID
+
+---
+
+## Passo a Passo para Criação de Usuário
+
+### 1. Acesso ao Portal Microsoft Entra
+- Acesse o [Microsoft Entra admin center](https://entra.microsoft.com/) com um papel de pelo menos **User Administrator**.
+
+### 2. Navegação
+- Vá para **Identity** > **Users** > **All users**.
+- Clique em **New user** > **Create new user**.
+
+---
+
+## Campos Básicos para Novo Usuário
+
+- **User principal name**:
+  - Nome de usuário único seguido por um domínio selecionado ou novo.
+- **Mail nickname**:
+  - Desmarcar "Derive from user principal name" caso precise de nickname diferente.
+- **Display name**:
+  - Nome completo do usuário (ex: João Silva).
+- **Password**:
+  - Pode ser automática ou personalizada.
+- **Account enabled**:
+  - Padrão ativado; desmarcar para bloquear login inicialmente.
+
+Selecione **Next: Properties** ou **Review + create** para prosseguir.
+
+---
+
+## Propriedades do Usuário
+
+Categorias disponíveis para preenchimento posterior:
+
+- **Identity**:
+  - Primeiro e último nome.
+  - Tipo de usuário: Membro ou Convidado.
+- **Job information**:
+  - Cargo, departamento e gestor.
+- **Contact information**:
+  - Informações de contato relevantes.
+- **Parental controls** (escolas K-12):
+  - Classificação etária (Menores, Não adultos, Adultos).
+- **Settings**:
+  - Localização global do usuário.
+
+Selecione **Review + create** ou prossiga para **Assignments**.
+
+---
+
+## Atribuições de Usuário (Assignments)
+
+Ao criar usuário, é possível atribuir:
+
+### Grupos
+- Adicione até 20 grupos ao usuário.
+- Procedimento: **+ Add group** > selecione grupos > **Review + create**.
+
+### Funções (Roles)
+- Atribua até 20 funções específicas.
+- Procedimento: **+ Add role** > escolha funções > **Review + create**.
+
+### Unidade Administrativa (Administrative Unit)
+- Adicione a uma unidade administrativa específica.
+- Procedimento: **+ Add administrative unit** > selecione uma unidade > **Review + create**.
+
+---
+
+
+
 
 
 
