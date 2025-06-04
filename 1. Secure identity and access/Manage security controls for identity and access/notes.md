@@ -372,3 +372,122 @@ Antes da criação ou convite de novos usuários, é essencial entender os tipos
 ---
 
 
+
+
+
+
+
+
+
+
+
+
+
+# Recomendações para o uso de Identidades Externas no Microsoft Entra ID
+
+---
+
+## O que é Colaboração B2B (Business-to-Business)?
+
+- Permite convidar usuários externos (convidados) para acessar aplicações e serviços da sua organização.
+- Convidados utilizam suas próprias credenciais para acessar recursos compartilhados.
+- Mantém controle sobre os dados corporativos, independentemente do parceiro ter Microsoft Entra ID ou não.
+
+---
+
+## Vantagens da Colaboração B2B
+
+- **Uso das próprias identidades**:
+  - Parceiros usam suas próprias credenciais, evitando sobrecarga administrativa externa.
+  - Não é necessário gerenciar contas externas ou senhas.
+  - Não é preciso sincronizar ou gerenciar ciclos de vida dessas contas.
+
+---
+
+## Gerenciamento de Colaboração com Outras Organizações
+
+### Configurações entre Tenants
+- Configuração padrão para colaboração B2B com outros tenants Microsoft Entra.
+- Controle sobre colaboração de entrada e saída.
+- Escopo de acesso limitado a usuários, grupos e aplicações específicas.
+- Possibilidade de aceitar MFA e reivindicações de dispositivos de outros tenants.
+
+### Configurações de Colaboração Externa
+- Controle quem pode convidar usuários externos.
+- Permite ou bloqueia domínios específicos.
+- Restrições de acesso dos usuários convidados ao diretório.
+
+### Configurações da Nuvem Microsoft
+- Colaboração B2B entre diferentes nuvens Azure (Global, Governamental, 21Vianet).
+
+---
+
+## Convite Fácil pelo Portal Azure
+
+- Administradores adicionam facilmente convidados diretamente pelo portal Azure.
+- Convidados são atribuídos a aplicações e grupos.
+- Convite enviado via e-mail contendo link para resgate e acesso.
+
+---
+
+## Autoatendimento para Cadastro (Self-service Sign-up)
+
+- Fluxo de cadastro personalizado para usuários externos.
+- Integração com provedores sociais e empresariais de identidade.
+- Possível uso de conectores API para validações adicionais.
+
+---
+
+## Uso de Políticas de Segurança
+
+- Aplicação de políticas de autenticação e autorização (Conditional Access).
+- Podem ser aplicadas em níveis diferentes:
+  - Tenant completo.
+  - Aplicações específicas.
+  - Usuários específicos para proteger dados e aplicações corporativas.
+
+---
+
+## Gerenciamento Autônomo pelos Proprietários de Aplicações e Grupos
+
+- Delegação da gestão de convidados aos próprios proprietários das aplicações.
+- Usuários não administradores podem adicionar diretamente convidados via painel de acesso.
+
+---
+
+## Personalização do Processo de Integração (Onboarding)
+
+- Uso do Microsoft Entra Entitlement Management para configurar políticas específicas.
+- Possibilidade de customização via APIs de convite para colaboração B2B.
+
+---
+
+## Integração com Provedores de Identidade
+
+- Suporte a provedores externos como Google, Facebook e contas Microsoft.
+- Usuários externos acessam aplicações com suas próprias contas sociais ou empresariais.
+
+---
+
+## Integração com SharePoint e OneDrive
+
+- Compartilhamento seguro de arquivos, listas e sites via integração com Azure B2B.
+- Autenticação via Azure B2B para gerenciamento simplificado.
+- Método alternativo via e-mail com senha temporária caso necessário.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
