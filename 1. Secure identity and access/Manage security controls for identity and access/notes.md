@@ -782,6 +782,67 @@ Identity Protection exige licença Microsoft Entra ID P2:
 
 
 
+# Microsoft Entra Cloud Sync
+
+## Overview
+
+- Microsoft Entra Cloud Sync is a cloud-based synchronization solution using a lightweight provisioning agent.
+- It is designed for hybrid identity scenarios and can be used alongside Microsoft Entra Connect.
+
+## Key Benefits
+
+- **Multi-forest Support:** Works with multiple, disconnected AD forests, ideal for mergers or historically separate environments.
+- **Simplified Setup:** Lightweight agent installed on-premises; sync configuration managed in the cloud.
+- **High Availability:** Multiple agents can be deployed for redundancy.
+- **Large Group Support:** Supports groups with up to 50,000 members using OU filters.
+
+## Differences from Microsoft Entra Connect Sync
+
+- Cloud Sync provisioning is fully managed in Microsoft Online Services.
+- Only a lightweight agent is needed on-premises.
+- Configuration and management are handled via Microsoft Entra ID cloud interface.
+
+## Comparison Table: Microsoft Entra Connect vs Cloud Sync
+
+| Feature                                             | Connect Sync | Cloud Sync |
+|-----------------------------------------------------|--------------|------------|
+| Single AD forest                                    | Yes          | Yes        |
+| Multiple AD forests                                 | Yes          | Yes        |
+| Disconnected AD forests                             | No           | Yes        |
+| Lightweight agent                                   | No           | Yes        |
+| Multiple agents (High Availability)                 | No           | Yes        |
+| LDAP directory support                              | Yes          | No         |
+| User/group/contact object support                   | Yes          | Yes        |
+| Device object support                               | Yes          | No         |
+| Basic attribute flow customization                  | Yes          | Yes        |
+| Exchange Online attribute sync                      | Yes          | Yes        |
+| Extension attributes 1-15 sync                      | Yes          | Yes        |
+| Custom AD attribute sync (directory extensions)     | Yes          | Yes        |
+| Password Hash Sync                                  | Yes          | Yes        |
+| Pass-through Authentication                         | Yes          | No         |
+| Federation support                                  | Yes          | Yes        |
+| Seamless SSO                                        | Yes          | Yes        |
+| Domain Controller installation                      | Yes          | Yes        |
+| Windows Server 2016 support                         | Yes          | Yes        |
+| Domain/OU/group filtering                           | Yes          | Yes        |
+| Attribute value filtering                           | Yes          | No         |
+| MinSync support                                     | Yes          | Yes        |
+| Exclude attributes from sync                        | Yes          | Yes        |
+| Advanced attribute customization                    | Yes          | No         |
+| Password writeback                                  | Yes          | Yes        |
+| Device writeback                                    | Yes          | Use Cloud Kerberos trust instead |
+| Group writeback                                     | Yes          | Yes        |
+| Merge attributes from multiple domains              | Yes          | No         |
+| Microsoft Entra Domain Services support             | Yes          | No         |
+| Exchange hybrid writeback                           | Yes          | Yes        |
+| Unlimited objects per AD domain                     | Yes          | No         |
+| Up to 150,000 objects per AD domain                 | Yes          | Yes        |
+| Groups with up to 50,000 members                    | Yes          | Yes        |
+| Groups with up to 250,000 members                   | Yes          | No         |
+| Cross-domain references                             | Yes          | Yes        |
+| On-demand provisioning                              | No           | Yes        |
+| Support for US Government                           | Yes          | Yes        |
+
 
 
 
