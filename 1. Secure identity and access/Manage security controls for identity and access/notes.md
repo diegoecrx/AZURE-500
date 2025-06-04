@@ -680,3 +680,108 @@ Identity Protection exige licença Microsoft Entra ID P2:
 | Política de registro MFA| Não                             | Não         | Sim         |
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Microsoft Entra Connect – Study Notes for AZ-500
+
+## Overview
+
+- Microsoft Entra Connect is an on-premises Microsoft application.
+- It is designed to support hybrid identity goals by integrating on-premises directories with Microsoft Entra ID.
+- It enables a consistent identity experience across cloud and on-premises environments.
+
+---
+
+## Microsoft Entra Connect Features
+
+### 1. Password Hash Synchronization (PHS)
+- Syncs a hash of users’ on-premises Active Directory (AD) passwords with Microsoft Entra ID.
+- Enables users to sign in with the same credentials in both environments.
+
+### 2. Pass-through Authentication (PTA)
+- Authenticates users directly against the on-premises AD without needing a federated infrastructure.
+- Provides a seamless sign-in experience using local credentials.
+
+### 3. Federation Integration
+- Optional feature that uses AD FS to establish a federated environment.
+- Includes AD FS management capabilities such as certificate renewal and additional server deployments.
+
+### 4. Synchronization
+- Ensures that users, groups, and other directory objects are created and matched between on-premises AD and Microsoft Entra ID.
+- Also synchronizes password hashes.
+
+### 5. Health Monitoring
+- Uses Microsoft Entra Connect Health to monitor identity components.
+- View monitoring data and alerts in the Microsoft Entra admin center.
+
+---
+
+## What is Microsoft Entra Connect Health?
+
+- Provides deep monitoring of the on-premises identity infrastructure.
+- Enhances reliability and helps maintain consistent access to Microsoft 365 and Microsoft Online Services.
+- Offers a centralized portal for:
+  - Alerts
+  - Performance monitoring
+  - Usage analytics
+  - Operational status
+
+---
+
+## Why Use Microsoft Entra Connect?
+
+- Offers a single identity for users to access on-premises and cloud applications.
+- Simplifies deployment of synchronization and sign-in methods.
+- Delivers the latest capabilities for identity management scenarios.
+
+---
+
+## Why Use Microsoft Entra Connect Health?
+
+- Ensures reliability of hybrid identity environments.
+- Installation requires deploying a lightweight agent on each identity server.
+- Supports:
+  - AD FS on Windows Server 2012 R2, 2016, 2019, and 2022
+  - Monitoring of Web Application Proxy servers for external authentication
+
+---
+
+## Key Benefits and Best Practices
+
+| Key Benefits                          | Best Practices                                                   |
+|--------------------------------------|------------------------------------------------------------------|
+| Enhanced security                    | Track extranet lockout trends and failed sign-ins; privacy compliance |
+| Critical issue alerting for AD FS    | Monitor server config, availability, performance, connectivity    |
+| Easy deployment and management       | Quick agent installation, auto-upgrades, fast data availability   |
+| Rich usage metrics                   | View top applications, network locations, TCP connections         |
+| Improved user experience             | Centralized dashboard in Entra admin center; email alerts         |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
