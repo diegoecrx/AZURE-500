@@ -486,7 +486,97 @@ Antes da criação ou convite de novos usuários, é essencial entender os tipos
 
 
 
+# Segurança de Identidades Externas no Microsoft Entra ID
 
+---
+
+## Introdução às Identidades Externas
+
+Microsoft Entra External ID permite que usuários externos acessem aplicações e recursos da organização usando suas próprias identidades corporativas, governamentais ou sociais (ex.: Google ou Facebook).
+
+---
+
+## Cenários de Uso de External ID
+
+### Para Aplicações Voltadas ao Consumidor (CIAM)
+- Rápida integração de autenticação.
+- Gestão separada em tenant externo para apps e usuários.
+- Fluxos de cadastro personalizados (self-service).
+- Personalização de branding e coleta de informações do usuário.
+- Análise de atividades para decisões estratégicas.
+
+### Para Colaboração Empresarial (B2B)
+- Acesso seguro a apps corporativas por convite ou autoatendimento.
+- Gestão compartilhada no mesmo tenant dos funcionários internos.
+- Autenticação via credenciais externas sem necessidade de gerenciar senhas.
+
+---
+
+## Segurança para Aplicações e Clientes Externos
+
+Em um tenant externo é possível:
+- Configurar fluxos de auto-registro (email/senha, contas sociais).
+- Criar experiência personalizada (branding da empresa).
+- Coletar informações adicionais durante o cadastro.
+- Obter insights estratégicos do uso da aplicação.
+
+---
+
+## Colaboração com Convidados Empresariais (B2B)
+
+Permite convidar usuários externos usando suas próprias credenciais para acessar recursos compartilhados:
+- Convites via Microsoft Entra admin center ou PowerShell.
+- Fluxos de cadastro self-service (identidades sociais ou corporativas).
+- Gestão automática via Microsoft Entra Entitlement Management.
+
+---
+
+## Tipos de Tenant
+
+| Tipo de Tenant | Descrição                                                      |
+|----------------|----------------------------------------------------------------|
+| Workforce      | Tenant padrão para funcionários e parceiros empresariais.      |
+| External       | Tenant separado exclusivo para consumidores/clientes externos. |
+
+---
+
+## Comparativo de Funcionalidades External ID
+
+| Funcionalidade | Workforce Tenant                               | External Tenant                          |
+|----------------|-------------------------------------------------|------------------------------------------|
+| Cenário principal | Colaboração B2B com parceiros.               | Publicação de apps externos (CIAM).      |
+| Gestão de usuários | Usuários B2B são "guest" no tenant interno. | Usuários geridos em tenant externo.      |
+| Single Sign-On | Suporte total (Microsoft 365, SaaS, etc.).      | Limitado a apps registrados no tenant.   |
+| Branding       | Padrão Microsoft personalizável.                | Branding totalmente customizável.        |
+| Microsoft Cloud settings | Suportado                             | Não aplicável                            |
+| Entitlement management   | Suportado                             | Não aplicável                            |
+
+---
+
+## Tecnologias Relacionadas
+
+### B2B Direct Connect
+- Criação de confiança bidirecional entre organizações Microsoft Entra.
+- Colaboração via Teams (compartilhamento de canais).
+
+### Azure AD B2C (legado)
+- Solução anterior para CIAM.
+- Gestão separada dos tenants.
+
+### Entitlement Management para Convidados Empresariais
+- Gestão automatizada e controle de acessos externos.
+
+### Microsoft Graph APIs para B2B
+- API para convites e políticas cross-tenant.
+
+### Conditional Access
+- Políticas de segurança aplicáveis também a usuários externos.
+- Possibilidade de aceitar MFA e compliance de dispositivos externos.
+
+### Aplicações Multitenant
+- Sincronização cross-tenant para múltiplas instâncias Entra.
+
+---
 
 
 
