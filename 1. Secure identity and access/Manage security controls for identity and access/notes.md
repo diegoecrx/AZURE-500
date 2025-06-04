@@ -694,7 +694,7 @@ Identity Protection exige licença Microsoft Entra ID P2:
 
 
 
-# Microsoft Entra Connect – Study Notes for AZ-500
+# Microsoft Entra Connect
 
 ## Overview
 
