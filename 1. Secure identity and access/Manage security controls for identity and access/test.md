@@ -229,3 +229,74 @@ Microsoft Entra ID é um serviço de gerenciamento de identidade e acesso basead
 
 
 
+
+
+
+
+
+
+
+
+# Segurança dos Usuários no Microsoft Entra ID
+
+---
+
+## Criação e Gerenciamento de Usuários
+
+Microsoft Entra ID permite criar diversos tipos de usuários, proporcionando maior flexibilidade no gerenciamento da organização.
+
+---
+
+## Papéis e Privilégios Necessários
+
+É recomendado utilizar sempre o papel com menor privilégio possível, dependendo do tipo de usuário e necessidade específica:
+
+| Tarefa                    | Papel Necessário               |
+|---------------------------|--------------------------------|
+| Criar novo usuário        | Administrador de Usuários      |
+| Convidar convidado externo| Convidador de Convidados       |
+| Atribuir funções Entra    | Administrador de Funções Privilegiadas |
+
+---
+
+## Tipos de Usuários no Microsoft Entra ID
+
+Antes da criação ou convite de novos usuários, é essencial entender os tipos e seus métodos de autenticação e privilégios:
+
+### 1. Membro Interno
+- Normalmente funcionários em tempo integral.
+- Contas internas gerenciadas por administradores.
+
+### 2. Convidado Interno
+- Possuem conta no seu tenant, mas privilégios limitados.
+- Podem ter sido criados antes da colaboração B2B estar disponível.
+
+### 3. Membro Externo
+- Autenticam por conta externa.
+- Acesso nível membro.
+- Comum em organizações com múltiplos tenants.
+
+### 4. Convidado Externo
+- Autenticam por método externo.
+- Privilegios nível convidado.
+- Verdadeiros convidados do tenant.
+
+---
+
+## Métodos de Autenticação por Tipo de Usuário
+
+- **Membros e convidados internos**:
+  - Credenciais administradas pelo tenant.
+  - Podem redefinir suas próprias senhas.
+
+- **Membros externos**:
+  - Autenticam-se no tenant Microsoft Entra original.
+  - Autenticação federada com o tenant original.
+  - Reset de senha feita pelos administradores do tenant original.
+
+- **Convidados externos**:
+  - Recebem link por e-mail para definir própria senha.
+
+---
+
+
