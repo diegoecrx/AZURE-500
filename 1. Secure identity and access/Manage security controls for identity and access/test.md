@@ -1,53 +1,114 @@
-# AZ-500 – Identity Management & Privileged Access (Microsoft Cloud Security Benchmark)
-
-These notes condense the **Identity Management and Privileged Access** module into an exam-oriented study guide.
-
-> **Scope** – IM-1 to IM-7 controls, with emphasis on Azure (Microsoft Entra ID) features that are frequently tested.  
-
-## 1. Control Summaries
-
-| ID  | Core Principle | Must-Know Azure Actions | Key Services/Tools |
-|-----|----------------|-------------------------|--------------------|
-| **IM-1**<br>Use a **centralized identity & authentication system** :contentReference[oaicite:0]{index=0} | Standardize on Microsoft Entra ID for all identities (cloud & on-prem). | • Create/secure a tenant<br>• Sync on-prem AD via AAD Connect<br>• Disable local auth on PaaS/IaaS | Entra ID, AD Connect |
-| **IM-2**<br>**Protect** identity & auth systems :contentReference[oaicite:1]{index=1} | Treat Entra ID as Tier-0; restrict roles, enforce MFA, monitor risk. | • Review **Secure Score**<br>• Enable **Identity Protection** risk policies<br>• Deploy **Defender for Identity** | Secure Score, Identity Protection, Defender for Identity |
-| **IM-3**<br>**Manage application identities** automatically :contentReference[oaicite:2]{index=2} | Replace human accounts with managed identities / service principals; automate rotation. | • Enable **System/User-assigned Managed Identity**<br>• Grant least-privilege RBAC<br>• Use cert-based creds | Managed Identities, Key Vault |
-| **IM-4**<br>**Authenticate servers & services** (TLS) :contentReference[oaicite:3]{index=3} | Always use TLS 1.2+; validate server certs; support mutual TLS when required. | • Enforce minimum TLS via Policy<br>• Configure mutual TLS in API Management | TLS Policies, API Management |
-| **IM-5**<br>**Single Sign-On (SSO)** for application access :contentReference[oaicite:4]{index=4} | Provide SSO with Entra ID to SaaS, PaaS & on-prem apps. | • Register enterprise apps<br>• Configure SAML/OIDC<br>• Set up SCIM provisioning | Entra ID Enterprise Apps |
-| **IM-6**<br>Use **strong authentication controls** :contentReference[oaicite:5]{index=5} | Default to passwordless or MFA; prioritise privileged roles. | • Enable Azure MFA / FIDO2 / Windows Hello<br>• Block legacy auth<br>• Configure Password Protection | Azure MFA, Passwordless |
-| **IM-7**<br>**Restrict access based on conditions** (Conditional Access) :contentReference[oaicite:6]{index=6} | Apply Zero-Trust signals (user, device, risk, location). | • Build CA policies (MFA, IP, device, session)<br>• Analyse CA Insights & Reporting | Conditional Access |
+# Microsoft Cloud Security Benchmark: Identity Management and Privileged Access
 
 ---
 
-## 2. Quick-Fire Revision Checklist
+## IM-1: Use centralized identity and authentication system
 
-- **Tenant security** – custom domains, global admin redundancy, no legacy auth.  
-- **Risk remediation** – user & sign-in risk policies, Secure Score recommendations.  
-- **Managed identities** – enable, assign RBAC, rotate secrets automatically.  
-- **TLS everywhere** – enforce via Azure Policy; verify cert chains in clients.  
-- **SSO flows** – SAML, OIDC, OAuth 2.0; provisioning via SCIM.  
-- **Passwordless & MFA** – choose correct method; configure registration policies.  
-- **Conditional Access** – plan, implement, and troubleshoot layered policies.
+**Security Principle:**
+- Centralize identity and authentication management.
 
----
+**Azure Guidance:**
+- Utilize Microsoft Entra ID para centralizar identidades e autenticação.
+- Evite métodos locais de autenticação.
+- Migre aplicações locais para Microsoft Entra ID sempre que possível.
 
-## 3. Practice Tasks for the Exam Lab
-
-1. **Configure** an Entra ID tenant, add a custom domain, and sync on-prem AD.  
-2. **Enable** Identity Protection, review a risky sign-in, and remediate.  
-3. **Assign** a system-assigned managed identity to a VM and grant it Key Vault Reader.  
-4. **Enforce** minimum TLS 1.2 on a Storage Account with Azure Policy.  
-5. **Integrate** a SaaS app with SAML SSO and test user provisioning.  
-6. **Deploy** Azure MFA with Conditional Access requiring MFA for privileged roles.  
-7. **Create** a Conditional Access policy blocking legacy authentication.
+**Implementação Azure:**
+- Configurar instância do Microsoft Entra ID.
+- Sincronização com Active Directory local.
 
 ---
 
-## 4. Exam Tips
+## IM-2: Protect identity and authentication systems
 
-- Memorise where each Entra feature lives in the portal and its CLI/PowerShell equivalents.  
-- Understand licensing requirements (e.g., P1 vs P2 for Identity Protection & CA).  
-- Expect scenario questions combining CA, MFA, and role assignments—know precedence rules.  
+**Security Principle:**
+- Proteja sistemas de identidade e autenticação com prioridade alta.
+
+**Azure Guidance:**
+- Use Identity Secure Score para avaliar e corrigir segurança.
+- Implementar funções administrativas limitadas.
+- Exigir MFA e bloquear autenticações legadas.
+
+**Ferramentas importantes:**
+- Microsoft Entra ID Identity Protection.
+- Microsoft Defender for Identity.
 
 ---
 
-**Total module time:** ≈ 15 min — invest extra lab time to internalise each control.
+## IM-3: Manage application identities securely and automatically
+
+**Security Principle:**
+- Gerencie identidades de aplicações automaticamente e de forma segura.
+
+**Azure Guidance:**
+- Use identidades gerenciadas do Azure para evitar credenciais embutidas no código.
+- Se necessário, utilize service principals com permissões restritas.
+
+**Implementação Azure:**
+- Identidades gerenciadas para recursos Azure.
+- Configuração de service principals.
+
+---
+
+## IM-4: Authenticate server and services
+
+**Security Principle:**
+- Garanta autenticação segura entre cliente e servidores remotos.
+
+**Azure Guidance:**
+- Implementar autenticação via TLS.
+- Aplicações devem verificar certificados durante handshake.
+
+**Serviços Azure:**
+- API Management, API Gateway (suporte a autenticação mútua).
+
+---
+
+## IM-5: Use single sign-on (SSO) for application access
+
+**Security Principle:**
+- Simplificar experiência do usuário com autenticação única (SSO).
+
+**Azure Guidance:**
+- Use Microsoft Entra ID SSO para acesso a aplicações corporativas e externas.
+
+**Implementação Azure:**
+- Aplicação de SSO via Microsoft Entra ID.
+
+---
+
+## IM-6: Use strong authentication controls
+
+**Security Principle:**
+- Exigir autenticação forte (sem senha ou MFA) para todos os acessos.
+
+**Azure Guidance:**
+- Priorize autenticação sem senha: Windows Hello, Microsoft Authenticator, FIDO2.
+- Implemente MFA amplamente, especialmente em usuários administrativos.
+- Evite autenticações legadas; se necessário, siga melhores práticas de senhas.
+
+**Implementação Azure:**
+- Ativar MFA no Azure.
+- Utilizar métodos passwordless disponíveis.
+
+---
+
+## IM-7: Restrict resource access based on conditions
+
+**Security Principle:**
+- Validar explicitamente condições de acesso dentro do modelo zero-trust.
+
+**Azure Guidance:**
+- Use o Conditional Access do Microsoft Entra ID para controles granulares.
+- Aplique políticas baseadas em risco, localização, dispositivos, e comportamento.
+
+**Cenários comuns de Conditional Access:**
+- Exigir MFA para administradores.
+- Bloquear autenticação legada.
+- Restringir acessos a locais confiáveis.
+
+**Implementação Azure:**
+- Configurar políticas de Conditional Access no portal Azure.
+
+---
+
+Este resumo serve como guia rápido e estruturado para preparação do exame de certificação AZ-500, abrangendo práticas recomendadas e ferramentas específicas do ambiente Microsoft Azure.
