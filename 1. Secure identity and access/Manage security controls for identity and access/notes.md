@@ -848,3 +848,130 @@ Identity Protection exige licença Microsoft Entra ID P2:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+# Authentication Options
+
+## Overview
+
+Microsoft Entra ID supports several authentication methods to ensure secure and flexible access across cloud and hybrid environments.
+
+---
+
+## Password Authentication
+
+- Basic form of authentication; uses username and password.
+- Commonly used for backward compatibility.
+- Not recommended unless combined with strong security policies (e.g., MFA).
+
+---
+
+## Multi-Factor Authentication (MFA)
+
+- Requires two or more authentication factors:
+  - Something you know (password)
+  - Something you have (phone, token)
+  - Something you are (biometrics)
+
+### Supported Methods:
+- Microsoft Authenticator App
+- Text message (SMS)
+- Voice call
+- OATH hardware tokens
+- FIDO2 security keys
+- Temporary access passes
+
+### Enforcement Options:
+- Per-user MFA
+- Conditional Access-based MFA (recommended)
+- Security defaults
+
+---
+
+## Passwordless Authentication
+
+- Enhances security and user experience.
+- Reduces phishing risks and credential theft.
+
+### Methods:
+- Microsoft Authenticator App (phone sign-in)
+- FIDO2 security keys (USB, NFC, or Bluetooth)
+- Windows Hello for Business (PIN or biometrics tied to the device)
+
+---
+
+## Temporary Access Pass (TAP)
+
+- Time-limited pass used to onboard users to passwordless or recover access.
+- Useful when:
+  - A user loses their credential
+  - Enrolling a new device
+  - Setting up passwordless methods
+
+---
+
+## Certificate-Based Authentication (CBA)
+
+- Uses digital certificates on smart cards or virtual smart cards.
+- Recommended for:
+  - High-security environments
+  - Federal or regulated industries
+
+---
+
+## Federated Authentication
+
+- Delegates authentication to an external identity provider (e.g., ADFS).
+- Enables:
+  - Use of existing credentials
+  - Smart card or third-party MFA integration
+
+---
+
+## Seamless Single Sign-On (SSO)
+
+- Automatically signs in users on corporate devices connected to AD.
+- Works with:
+  - Password hash sync
+  - Pass-through authentication
+
+---
+
+## Comparison Table of Authentication Methods
+
+| Method                       | MFA | Passwordless | Phishing-Resistant | Recommended Use Cases                             |
+|-----------------------------|-----|---------------|---------------------|---------------------------------------------------|
+| Password + MFA              | Yes | No            | Partial             | Legacy systems, gradual transition to modern auth |
+| Microsoft Authenticator     | Yes | Yes           | Partial             | Most common, easy to deploy                        |
+| FIDO2 Security Keys         | Yes | Yes           | Yes                 | High-security environments                         |
+| Windows Hello for Business  | Yes | Yes           | Yes                 | Enterprise devices, integrated Windows login       |
+| Temporary Access Pass       | Yes | Yes           | Yes (if configured) | Onboarding, credential recovery                    |
+| Certificate-Based Auth      | Yes | Yes           | Yes                 | Federal, highly regulated                          |
+| Federated (e.g., ADFS)      | Depends | No       | Depends             | On-premises identity integration                   |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
