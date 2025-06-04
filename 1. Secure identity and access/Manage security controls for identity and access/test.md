@@ -121,7 +121,7 @@
 
 
 
-# Resumo de Estudo: Microsoft Entra ID
+# Microsoft Entra ID
 
 ---
 
